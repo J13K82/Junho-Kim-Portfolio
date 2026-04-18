@@ -117,7 +117,7 @@ section h2 {
 
 .image-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 0.6rem;
   margin: 0.6rem 0 1rem;
   justify-items: center;
@@ -190,14 +190,16 @@ section h2 {
 
 .image-row a img,
 .image-stack a img,
-.card > a img {
+.card > a img,
+.rotated-frame img {
   cursor: pointer;
   transition: opacity 0.2s ease;
 }
 
 .image-row a:hover img,
 .image-stack a:hover img,
-.card > a:hover img {
+.card > a:hover img,
+.rotated-frame:hover img {
   opacity: 0.85;
 }
 
@@ -281,6 +283,11 @@ footer {
 
   .image-stack img {
     width: 100%;
+  }
+
+  .rotated-frame {
+    height: 260px;
+    max-width: 100%;
   }
 
   .close {
